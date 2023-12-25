@@ -1,12 +1,10 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
-import Discount from './discount'; 
+import Register from './Register'
 
 function App() {
   return (
-    <>
-      <Discount></Discount>
-    </>
+      <Register></Register>
   )
 }
 
