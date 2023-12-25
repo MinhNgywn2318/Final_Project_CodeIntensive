@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import Discount from './discount';  // Capitalize the component name
+import Discount from './discount'; 
 
 function App() {
   return (
     <>
-      <Discount></Discount>  {/* Use the capitalized component name */}
+      <Discount></Discount>
     </>
   )
 }
