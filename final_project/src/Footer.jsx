@@ -9,27 +9,27 @@ const Footer = () => {
         <span>Get connected with us on social networks:</span>
       </div>
       <div>
-        <a href className="me-4 text-reset">
+        <a href="#" className="me-4 text-reset">
           <i className="fab fa-facebook-f" />
         </a>
-        <a href className="me-4 text-reset">
+        <a href="#" className="me-4 text-reset">
           <i className="fab fa-twitter" />
         </a>
-        <a href className="me-4 text-reset">
+        <a href="#" className="me-4 text-reset">
           <i className="fab fa-google" />
         </a>
-        <a href className="me-4 text-reset">
+        <a href="#" className="me-4 text-reset">
           <i className="fab fa-instagram" />
         </a>
-        <a href className="me-4 text-reset">
+        <a href="#" className="me-4 text-reset">
           <i className="fab fa-linkedin" />
         </a>
-        <a href className="me-4 text-reset">
+        <a href="#" className="me-4 text-reset">
           <i className="fab fa-github" />
         </a>
       </div>
     </section>
-    <section className>
+    <section className="test">
       <div className="container text-center text-md-start mt-5">
         <div className="row mt-3">
           <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">

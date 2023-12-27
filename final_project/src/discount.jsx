@@ -14,7 +14,7 @@ function Discount() {
           Your browser does not support the video tag.
         </video>
         <center>
-          <img src="../IMG/discount1.jpg" alt />
+          <img src="../IMG/discount1.jpg" alt="Discount_img" />
         </center>
       </div>
       <Footer></Footer>

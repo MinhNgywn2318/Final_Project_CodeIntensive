@@ -22,7 +22,7 @@ const Register = () => {
             <input type="password" id="password" className="input__type" />
           </div>
           <div className="input">
-            <label htmlFor="confirm-password">Xác nhận mật khẩu</label>
+            <label htmlFor="confirm-password">Confirm Password</label>
             <input type="password" id="confirm-password" className="input__type" />
           </div>
           <div className="check" style={{ display: 'flex', alignItems: 'center',paddingLeft: 20 }}>
@@ -45,10 +45,10 @@ const Register = () => {
         </form>
       </div>
       <div>
-        <span id="errName">(*)</span>
-        <span id="errEmail">(*)</span>
-        <span id="errPass">(*)</span>
-        <span id="errConfirmPass">(*)</span>
+        <span id="errName text-danger"></span>
+        <span id="errEmail text-danger"></span>
+        <span id="errPass text-danger" ></span>
+        <span id="errConfirmPass text-danger"></span>
       </div>
     </>
   );
