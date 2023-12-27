@@ -69,7 +69,7 @@
 }
 
 .button {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
 }
@@ -131,4 +131,7 @@ span {
 
 #errName {
     margin-top: -555px;
+}
+button[disabled=disabled], button:disabled{
+    cursor: not-allowed;
 }
