@@ -1,9 +1,9 @@
 // discount.js
 import React from 'react';
-import './App.css'
-import './discount.css'
-import Header from './Header';
-import Footer from './Footer';
+import '../src/App.css'
+import '../src/discount.css'
+import Header from '../component/Header';
+import Footer from '../component/Footer';
 function Discount() {
   return (
     <>

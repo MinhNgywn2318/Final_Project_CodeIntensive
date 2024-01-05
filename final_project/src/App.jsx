@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import Discount from './Discount';
+import Discount from '../page/Discount';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './Login';
-import Register from './Register';
+import Login from '../page/Login';
+import Register from '../page/Register';
 
 function App() {
   return (

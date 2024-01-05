@@ -78,10 +78,6 @@
     border: 1px solid black;
 }
 
-.button button:hover {
-    background-color: black !important;
-    color: white;
-}
 
 .button button {
     width: 100%;
