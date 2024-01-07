@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../src/Register.css';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
 import axios from 'axios';
 const Register = () => {
@@ -10,7 +10,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [mobile, setMobile] = useState("");
   const [address, setAddress] = useState("");
-  const history = useHistory();
+  // const history = useHistory();
   const handleRegister = async () => {
     try {
       const response = await axios.post("https://ecommerce-shopping-api.onrender.com/api/user/register", {
@@ -22,7 +22,7 @@ const Register = () => {
       });
 
       console.log(response.data); // Log chi tiết phản hồi từ API
-      history.push('/login');
+      // history.push('/login');
     // Xử lý thành công, có thể chuyển hướng hoặc hiển thị thông báo đăng ký thành công
   } catch (error) {
     console.error("Error during registration:", error);
