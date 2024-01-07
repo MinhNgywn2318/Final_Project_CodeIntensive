@@ -1,9 +1,22 @@
 import React, { useState } from 'react'
 import '../src/Register.css';
-
+import axios from 'axios';
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const handleLogin = async () => {
+  try {
+    const response = await axios.post("https://ecommerce-shopping-api.onrender.com/api/user/login", {
+      email: email,
+      password: password
+    });
+
+    console.log(response.data); // Log dữ liệu trả về từ API
+  } catch (error) {
+    console.error("Error during login:", error);
+  }
+};
+
   return (
     <>
       <div className="form__create">
@@ -24,7 +37,7 @@ const Login = () => {
             <a style={{textDecoration: 'none', color: 'white', paddingLeft: 74}} href="../HTML/DangKi.html"> Don't have account? </a>
           </div>
           <div className="button">
-            <button id="button" type="submit" className={email && password ? "active":""} disabled={email && password ? false : true}>Login Now</button>
+            <button id="button" type="submit" className={email && password ? "active":""} disabled={email && password ? false : true} onClick={handleLogin}>Login Now</button>
           </div>
           <div className="box">
             <p> or </p>

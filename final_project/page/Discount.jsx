@@ -17,7 +17,7 @@ function Discount() {
           <img src="../IMG/discount1.jpg" alt="Discount_img" />
         </center>
       </div>
-      <Footer></Footer>
+      <Footer></Footer> 
     </>
   );
 }
