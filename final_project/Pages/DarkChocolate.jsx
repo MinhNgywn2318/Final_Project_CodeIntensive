@@ -1,14 +1,6 @@
 import React from "react";
 import '../src/index.css';
-// import png1 from '../IMG/dark-chocolate-with-coca-nibs-19.20$.jpg';
-// import png2 from '../IMG/dark-chocolate-fruit-nut-18.00$.jpg';
-// import png3 from '../IMG/dark-chocolate-with-coffee-24.15$.jpg';
-// import png4 from '../IMG/dark-chocolate-with-cumin-21.50$.jpg';
-// import png1 from '../IMG/dark-chocolate-with-coca-nibs-19.20$.jpg';
-// import png1 from '../IMG/dark-chocolate-with-coca-nibs-19.20$.jpg';
-// import png1 from '../IMG/dark-chocolate-with-coca-nibs-19.20$.jpg';
-// import png1 from '../IMG/dark-chocolate-with-coca-nibs-19.20$.jpg';
-// import bootstrap from 'bootstrap';
+
 
 const DarkChocolate = ({ productList }) =>{
     return (
