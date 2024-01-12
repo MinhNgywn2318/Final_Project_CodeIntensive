@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <>
     <footer className="text-center text-lg-start  text-dask" style={{border: '2px dashed black', marginTop: 20, borderRadius: 10}}>
-    <section className="d-flex justify-content-center justify-content-lg-between p-4" style={{borderBottom: '2px dashed black'}}>
+    <section className="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between p-4" style={{borderBottom: '2px dashed black'}}>
       <div className="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
+        <div>Get connected with us on social networks:</div>
       </div>
       <div>
         <a href="#" className="me-4 text-reset">
