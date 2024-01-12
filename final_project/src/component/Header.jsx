@@ -20,7 +20,7 @@ const Header = () => {
       <NavLink to="/home" activeClassName="active"><img src="../images/logo.png" alt="logo" /></NavLink>
       <nav className="formpage__header--nav">
         <ul className="nav__ul">
-          <li><NavLink to="/about" activeClassName="active">About us</NavLink></li>
+          <li><NavLink to="/about_us" activeClassName="active">About us</NavLink></li>
           <li><NavLink to="/" activeClassName="active">Discount</NavLink></li>
           <li style={{ color: '#ffffff' }}><NavLink to="/login" activeClassName="active">Log in</NavLink>/<NavLink to="/register" activeClassName="active">Sign up</NavLink></li>
           <li><a href="#" className="cart-icon">

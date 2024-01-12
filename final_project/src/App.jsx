@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import DarkChocolate from './pages/DarkChocolate';
 import WhiteChocolate from './pages/WhiteChocolate';
+import Aboutus from './pages/aboutus';
 function App() {
   const productList = [
   {
@@ -178,6 +179,7 @@ function App() {
         <Route path="/" element={<Discount />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/about_us" element={<Aboutus />} />
         <Route path="/dark-chocolate" element={<DarkChocolate  productList={productList}/>} />
         <Route path="/white-chocolate" element={<WhiteChocolate productList={productList_White}  />} />
       </Routes>
