@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../src/Register.css';
+import '../Register.css';
 import axios from 'axios';
 const Login = () => {
   const [email, setEmail] = useState("");

@@ -79,7 +79,10 @@
 .dropdown-content a:hover {
   color: white;
 }
-
+.dropdown-content a.active {
+  background-color: #8d928d;
+  color: white;
+}
 .dropdown:hover .dropdown-content {
   display: block;
 
@@ -96,7 +99,9 @@
 #user--login:hover {
   color: brown !important;
 }
-
+.dropdown:hover .dropdown-content.active {
+  display: block;
+}
 #logout-link:hover {
   color: brown !important;
 }
@@ -141,10 +146,19 @@
 /*  */
 
 .addtocart {
+  width: 100px;
+  height: 30px;
   background-color: black;
   border: 0;
   border-radius: 10px;
   color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 90px;
+
+}
+.addtocart:hover{
+  color: brown;
 }
 
 .section_trending,
@@ -295,7 +309,7 @@
 
 .card {
   width: 310px;
-  height: 420px;
+  height: 450px !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
@@ -304,6 +318,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   border: 2px solid black;
+  position: relative;
 }
 
 .img-fluid-rounded-start {
@@ -394,12 +409,6 @@ footer img {
   width: 90%;
 }
 
-.modal_order {
-  background-image: url(../IMG/background-giay-cu-xam_090129420.jpg) !important;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 .border_img {
   border: 3px solid #997652 !important;
 }
@@ -464,4 +473,38 @@ a:hover {
   bottom: 50px;
   border: 2px dashed rgb(40, 39, 39);
   color: rgb(149, 147, 147);
+}
+.text-center{
+  text-align: center;
+}
+/* MyPagination.css */
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  
+  /* (Tùy chọn) Điều chỉnh khoảng cách trên cùng */
+}
+
+.custom-pagination .page-item {
+  margin: 0 5px;
+}
+
+.custom-pagination .page-link {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0px !important;
+}
+
+.custom-pagination .page-link:hover {
+  background-color: #eee;
+}
+.custom-pagination .page-item.active .page-link {
+  background-color: #7f8981;
+  /* Màu xanh khi nút đang được nhấn */
+  border-color: #fff;
+  color: #fff;
+  /* Màu chữ trắng khi nút đang được nhấn */
 }

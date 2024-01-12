@@ -17,7 +17,7 @@ const Header = () => {
           <li><NavLink to="/gifts" activeClassName="active">Christmas Gifts</NavLink></li>
         </ul>
       </nav>
-      <NavLink to="/home"><img src="../IMG/logo.png" alt="logo" /></NavLink>
+      <NavLink to="/home" activeClassName="active"><img src="../images/logo.png" alt="logo" /></NavLink>
       <nav className="formpage__header--nav">
         <ul className="nav__ul">
           <li><NavLink to="/about" activeClassName="active">About us</NavLink></li>

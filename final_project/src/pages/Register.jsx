@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../src/Register.css';
+import '../Register.css';
 // import { useHistory } from 'react-router-dom';
 
 import axios from 'axios';
