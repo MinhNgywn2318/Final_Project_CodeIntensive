@@ -10,17 +10,29 @@ const DarkChocolate = ({ productList }) => {
   const itemsPerPage = 6; 
   const totalPages = Math.ceil(productList.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
-
+  const [cartItems, setCartItems] = useState([]);
+  
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentProducts = productList.slice(startIndex, endIndex);
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
-
+  const handleAddToCart = (product) => {
+  const isProductInCart = cartItems.some((item) => item.id === product.id);
+  if (!isProductInCart) {
+    setCartItems([...cartItems, { ...product, quantity: 1 }]);
+  } else {
+    // Nếu sản phẩm đã có trong giỏ hàng, tăng số lượng
+    const updatedCart = cartItems.map((item) =>
+      item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setCartItems(updatedCart);
+  }
+};
   return (
     <>
-      <Header />
+      <Header cartItems={cartItems}/>
       <div className="container">
         <h2 className="dark">Dark Chocolate</h2>
         <div className="product-grid">
@@ -31,12 +43,12 @@ const DarkChocolate = ({ productList }) => {
                   <div className="col-md-12">
                     <div className="card-body flex justify-content-center">
                       <h5 className="card-title">{product.nameProduct}</h5>
-                      <img src={product.images} alt={product.nameProduct} style={{ width: "100%" }} />
+                      <img src={product.images} alt={product.nameProduct} style={{ width: "100%",height: "80%"}} />
                       <p className="card-text">{product.description}</p>
-                      <p className="card-text">Total: {product.Total}</p>
+                      <p className="card-text">Total: {product.price}</p>
                       <p className="card-text">
                         <small className="text-body-secondary">
-                          <input className="addtocart" type="submit" value="add to cart" />
+                          <input className="addtocart" type="submit" value="add to cart" onClick={() => handleAddToCart(product)} />
                         </small>
                       </p>
                     </div>
