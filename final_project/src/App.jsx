@@ -204,7 +204,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/about_us" element={<Aboutus />} />
         <Route path="/dark-chocolate" element={<DarkChocolate  productList={productList}/>} />
-        <Route path="/white-chocolate" element={<WhiteChocolate productList={productList_White}  />} />
+        <Route path="/white-chocolate" element={<WhiteChocolate productList={productList_White} />} />
       </Routes>
     </Router>
   );

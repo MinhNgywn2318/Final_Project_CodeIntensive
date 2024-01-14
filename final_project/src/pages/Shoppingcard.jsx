@@ -5,7 +5,7 @@ import '../shop.css';
 const ShoppingCart = ({ show, handleClose, cartItems }) => {
   const [localCartItems, setLocalCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-
+  
   useEffect(() => {
     // Synchronize localCartItems with cartItems
     setLocalCartItems(cartItems);
