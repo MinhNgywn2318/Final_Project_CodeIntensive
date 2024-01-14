@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Container, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -28,11 +28,19 @@ const Header = ({ cartItems }) => {
         <ul className="nav__ul">
           <li><NavLink to="/about_us" activeClassName="active">About us</NavLink></li>
           <li style={{ color: '#ffffff' }}><NavLink to="/login" activeClassName="active">Log in</NavLink>/<NavLink to="/register" activeClassName="active">Sign up</NavLink></li>
-          <li>
-            <a href="#" className="cart-icon" onClick={handleCartOpen}>
-              <i className="fa-solid fa-cart-shopping" style={{ color: '#ffffff' }} />
-            </a>
-          </li>
+          <Fragment>
+            <li style={{position:"relative"}}>
+              <a href="#" className="cart-icon" onClick={handleCartOpen}>
+                {/* Hiển thị icon giỏ hàng */}
+                <i className="fa-solid fa-cart-shopping" style={{ color: '#ffffff' }} />
+              </a>
+              {/* Hiển thị số lượng sản phẩm trong giỏ hàng */}
+            {cartItems && cartItems.length > 0 && (
+              <div style={{width:"20px",height:"20px",textAlign:"center",lineHeight:"20px",position:"absolute", right: "8px",top: "30px",color: '#ffffff',borderRadius:"20px", backgroundColor:"brown"}}>{cartItems.length}</div>
+            )}
+            </li>
+            
+          </Fragment>
           
         </ul>
       </nav>
