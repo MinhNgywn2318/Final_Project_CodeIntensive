@@ -11,17 +11,18 @@ const ShoppingCart = ({ show, handleClose, cartItems }) => {
     setLocalCartItems(cartItems);
   }, [cartItems]);
 
- useEffect(() => {
-  const total = localCartItems.reduce((acc, item) => {
-    const itemPrice = parseFloat(item.price) || 0;
-    const itemQuantity = parseInt(item.quantity, 10) || 0;
-    const itemTotal = itemPrice * itemQuantity;
-    return acc + itemTotal;
-  }, 0);
-  setTotalPrice(total);
-}, [localCartItems]);
-
-
+  useEffect(() => {
+    // Check if localCartItems is not undefined or null before using reduce
+    if (localCartItems && localCartItems.length > 0) {
+      const total = localCartItems.reduce((acc, item) => {
+        const itemPrice = parseFloat(item.price) || 0;
+        const itemQuantity = parseInt(item.quantity, 10) || 0;
+        const itemTotal = itemPrice * itemQuantity;
+        return acc + itemTotal;
+      }, 0);
+      setTotalPrice(total);
+    }
+  }, [localCartItems]);
 
   const handleIncreaseQuantity = (itemId) => {
     const updatedCart = localCartItems.map((item) => {
@@ -76,12 +77,11 @@ const ShoppingCart = ({ show, handleClose, cartItems }) => {
           ) : (
             <li>Your cart is empty.</li>
           )}
-          
-              </ul>
-              <div style={{ display:"flex", marginTop:"20px", alignItems:"center"}}>
-                      <strong>Total: {totalPrice}$</strong>
-                      <button className='buttonShop'>Shop now</button>
-          </div>
+        </ul>
+        <div style={{ display: "flex", marginTop: "20px", alignItems: "center" }}>
+          <strong>Total: {totalPrice}$</strong>
+          <button className='buttonShop'>Shop now</button>
+        </div>
       </Offcanvas.Body>
     </Offcanvas>
   );
